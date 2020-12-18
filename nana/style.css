@@ -189,11 +189,11 @@ footer {
   .picture {
     width: 100%;
     height: auto;
-    transition: transform .2s ease;
+    transition: none;
   }
 
   .picture:hover {
-    transform: scale(1.5);
+    transform: none;
   }
 
   /* nav */
