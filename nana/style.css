@@ -186,12 +186,15 @@ footer {
     height: auto;
   }
 
-  .chapter .picture {
+  .picture {
     width: 100%;
     height: auto;
+    transition: transform .2s ease;
   }
 
-
+  .picture:hover {
+    transform: scale(1.5);
+  }
 
   /* nav */
   nav.responsive {
