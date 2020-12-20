@@ -13,12 +13,14 @@ nav {
 nav ul {
   float: right;
   margin-right: 20px;
+  list-style: none;
 }
 
 nav ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 10px;
+  background-color: burlywood;
 }
 
 nav ul li a {
@@ -34,6 +36,24 @@ nav ul li a:hover {
   font-weight: bold;
   transition: 0.3s;
   background-color: rgb(231, 198, 154);
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  margin-left: -65px;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul li {
+  width: 150px;
+  padding-left: 15px;
+  float: none;
+  display: list-item;
+  position: relative;
 }
 
 section {
