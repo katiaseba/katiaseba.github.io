@@ -102,7 +102,6 @@ p {
 .container {
   width: 80%;
   margin: auto;
-  border-radius: 9px;
 }
 
 .separation {
@@ -116,7 +115,6 @@ p {
 .number-chap {
   color: black;
   font-size: 17px;
-  
 }
 
 .title-chap {
@@ -179,10 +177,82 @@ p {
   left: 0;
 }
 
+.slide-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 80px;
+  position: relative;
+  background-color: rgb(255, 248, 240);
+  border: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+  
+.slider img {
+  max-width: 100%;
+  display: none;
+}
+
+.img {
+  margin: auto;
+}
+
+img.active {
+  display: block;
+  animation: fade 0.4s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  font-size: 30px;
+  color: #850c0c;
+  opacity: 50%;
+  cursor: pointer;
+  transition: 0.3s
+}
+
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  font-size: 30px;
+  color: #850c0c;
+  opacity: 50%;
+  cursor: pointer;
+  transition: 0.3s
+}
+
+#prevBtn:hover, #nextBtn:hover {
+  opacity: 80%;
+}
+
 #chapters {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.gohome-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.gohome-container a {
+  padding-left: 45%;
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 footer {
@@ -259,3 +329,4 @@ footer {
     margin: auto;
   }
 }
+
