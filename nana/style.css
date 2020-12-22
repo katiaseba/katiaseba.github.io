@@ -104,6 +104,11 @@ p {
   margin: auto;
 }
 
+.chap-container {
+  width: 60%;
+  margin: auto;
+}
+
 .separation {
   width: 70px;
   height: 1px;
@@ -178,7 +183,7 @@ p {
 }
 
 .slide-container {
-  width: 80%;
+  width: 60%;
   margin: auto;
   margin-top: 80px;
   position: relative;
@@ -253,6 +258,11 @@ img.active {
   padding-left: 45%;
   font-size: 20px;
   text-decoration: underline;
+}
+
+#prevBtn, #nextBtn {
+  opacity: 100%;
+  transition: none;
 }
 
 footer {
