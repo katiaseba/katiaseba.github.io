@@ -100,11 +100,13 @@ p {
 }
 
 .container {
+  min-height: 100%;
   width: 80%;
   margin: auto;
 }
 
 .chap-container {
+  min-height: 100%;
   width: 60%;
   margin: auto;
 }
@@ -253,6 +255,7 @@ p {
 }
 
 .gohome-container a {
+  min-height: 100%;
   font-size: 20px;
   text-decoration: underline;
 }
