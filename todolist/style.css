@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(238, 196, 169);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: rgb(221, 123, 123);
+  margin: 90px auto;
+  padding: 30px;
+  width: 60%;
+  box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.79);
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+header, form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-input {
+  width: 50%;
+  border: none;
+  border-bottom: maroon 1px solid;
+  font-size: 1.1em;
+  background: transparent;
+  padding: 7px 0;
+}
+
+::placeholder {
+  color: rgba(240, 195, 195, 0.493);
+}
+
+.todo-btn {
+  border: none;
+  padding: 7px 8px;
+  background: rgb(245, 211, 211);
+  border-radius: 200px 200px 200px 200px;
+  color: maroon;
+  cursor: pointer;
+}
+
+.todo-container {
+  padding: 40px 50px;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo {
+  margin: 10px;
+  border-bottom: maroon 1px solid;
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+.todo-item {
+  margin-right: auto;
+}
+
+.check-btn, .delete-btn {
+  background: transparent;
+  border: none;
+  color:rgb(83, 71, 71);
+  cursor: pointer;
+  padding: 5px;
+}
+
+.fa-check, .fa-trash-alt {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
