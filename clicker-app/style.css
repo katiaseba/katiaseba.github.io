@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(39, 32, 27);
+  font-family: 'roboto', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  margin: 70px 70px 20px;
+  text-align: center;
+  width: 60%;
+}
+
+.click-btn {
+  border: none;
+  color: rgb(182, 140, 101);
+  background: transparent;
+  padding: 40px 0;
+  cursor: pointer;
+}
+
+header, .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clicker {
+  margin: 40px;
+}
+
+#shop {
+  background-color: rgb(49, 44, 44);
+  width: 230px;
+  padding: 30px 10px;
+  box-shadow: -6px 0px 7px -3px rgba(0,0,0,0.65);
+}
+
+li {
+  list-style: none;
+}
+
+.shop-btn {
+  position: relative;
+}
+
+.buy-cursors-btn, .buy-grandma-btn {
+  border: none;
+  color: rgb(86, 143, 86);
+  background: transparent;
+  cursor: pointer;
+  padding: 0px 8px;
+}

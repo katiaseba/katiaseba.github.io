@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clicker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/3d6f520b83.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Clicker</h1>
+    </header>
+
+    <section>
+      <div class="clicker">
+        <p>You got: <span id="count">0</span> cookies </p> <br>
+        <p>Cookies per seconds: <span id="persec">0</span></p>
+        <button class="click-btn"><i class="fas fa-cookie-bite fa-10x"></i></button>
+      </div>
+  </div>
+
+  <div id="shop">
+    <span class="shop-btn">Shop</span>
+    <ul>
+      <li> 
+        Cursor: <span id="cursor-price">10 </span>
+        <button class="buy-cursors-btn"><i class="fas fa-dollar-sign fa-2x"></i></button>
+        Total: <span id="cursors">0</span>
+      </li>
+      <li>
+        Grandma: <span id="grandma-price">70</span>
+        <button class="buy-grandma-btn"><i class="fas fa-dollar-sign fa-2x"></i></button>
+        Total: <span id="grandmas">0</span>
+      </li>
+    </ul>
+  </div>
+  </section>
+  <script src="App.js"></script>
+</body>
+
+</html>
