@@ -32,7 +32,6 @@ function buyCursors() {
   }
 }
 
-
 function buyGrandmas() {
   if (count >= grandmaPrice) {
     count = count - grandmaPrice
