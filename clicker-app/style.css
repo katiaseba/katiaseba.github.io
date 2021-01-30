@@ -43,7 +43,7 @@ section {
 
 #shop {
   background-color: rgb(49, 44, 44);
-  width: 230px;
+  width: 30%;
   padding: 30px 10px;
   box-shadow: -6px 0px 7px -3px rgba(0,0,0,0.65);
   height: 100%;
@@ -54,8 +54,16 @@ section {
   overflow-x: hidden;
 }
 
+h3 {
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 4px rgb(182, 140, 101) solid;
+}
+
 li {
   list-style: none;
+  margin: 0 0 15px 0;
 }
 
 .shop-btn {
@@ -63,11 +71,16 @@ li {
 }
 
 .buy-cursors-btn, .buy-grandma-btn {
+  background-color: rgb(182, 140, 101);
   border: none;
-  color: rgb(86, 143, 86);
-  background: transparent;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 15px 5px;
   cursor: pointer;
-  padding: 0px 8px;
 }
 
 footer {

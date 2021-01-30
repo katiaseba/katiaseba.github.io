@@ -1,6 +1,6 @@
 let count = 0
-let cursorPrice = 10
-let grandmaPrice = 70
+let cursorPrice = 20
+let grandmaPrice = 100
 let cursors = 0
 let grandmas = 0
 let perSec = 0
@@ -26,7 +26,7 @@ function buyCursors() {
     perSec++
 
     document.getElementById("count").innerHTML = count
-    document.getElementById("cursor-price").innerHTML = cursorPrice
+    document.getElementById("cursor-price").innerHTML = cursorPrice + " cookies"
     document.getElementById("cursors").innerHTML = cursors
     document.getElementById("persec").innerHTML = perSec
   }
@@ -40,7 +40,7 @@ function buyGrandmas() {
     perSec += 2
 
     document.getElementById("count").innerHTML = count
-    document.getElementById("grandma-price").innerHTML = grandmaPrice
+    document.getElementById("grandma-price").innerHTML = grandmaPrice + " cookies"
     document.getElementById("grandmas").innerHTML = grandmas
     document.getElementById("persec").innerHTML = perSec
   }
