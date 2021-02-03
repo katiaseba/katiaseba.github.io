@@ -14,15 +14,14 @@
 <body>
 
   <div class="container">
-    <header>
-      <h1>Clicker</h1>
-    </header>
 
     <section>
       <div class="clicker">
-        <p>You got: <span id="count">0</span> cookies </p> <br>
-        <p>Cookies per seconds: <span id="persec">0</span></p>
-        <button class="click-btn"><i class="fas fa-cookie-bite fa-10x"></i></button>
+        <p class="one">You got: <span id="count">0</span> cookies </p> <br>
+        <p>Cookies per seconds: <span id="persec">0</span></p> <br>
+        <p>Cookies per click: <span id="amount">1</span></p>
+        <button class="click-btn"><i class="fas fa-cookie-bite fa-10x"></i></button> <br>
+        <button class="save-btn">Save</button>
       </div>
   </div>
 
@@ -31,11 +30,18 @@
     <ul>
       <li>
         Cursor: <span id="cursor-price">20 cookies</span> (<span id="cursors">0</span>)<br>
-        <button class="buy-cursors-btn">Buy</button> <br>
+        <button class="buy-cursors-btn">Buy</button> 
+        <button class="buy-tencursors-btn">x10</button>
       </li>
       <li>
         Grandma: <span id="grandma-price">100 cookies</span> (<span id="grandmas">0</span>)<br>
-        <button class="buy-grandma-btn">Buy</button> <br>
+        <button class="buy-grandma-btn">Buy</button>
+        <button class="buy-tengrandma-btn">x10</button> 
+      </li>
+      <li>
+        Bakery: <span id="bakery-price">600 cookies</span> (<span id="bakeries">0</span>)<br>
+        <button class="buy-bakery-btn">Buy</button>
+        <button class="buy-tenbakery-btn">x10</button> 
       </li>
     </ul>
   </div>
