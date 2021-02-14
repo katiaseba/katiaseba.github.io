@@ -6,7 +6,7 @@ let cursors = 0
 let grandmas = 0
 let bakeries = 0
 let perSec = 0
-let amount = 1
+let perClick = 1
 
 const clickBtn = document.querySelector(".click-btn")
 const buyCursor = document.querySelector(".buy-cursors-btn")
@@ -24,11 +24,14 @@ buyTenCursor.addEventListener("click", buyTenCursors)
 buyTenGrandma.addEventListener("click", buyTenGrandmas)
 buyBakery.addEventListener("click", buyBakeries)
 buyTenBakery.addEventListener("click", buyTenBakeries)
-saveBtn.addEventListener("click", saveGame)
+// saveBtn.addEventListener("click", saveGame)
 
 function addCount() {
-  count += amount
+  count += perClick
   document.getElementById("count").innerHTML = count
+  if (count >= cursorPrice) {
+    buyCursor.classList.add("can-buy")
+  } 
 }
 
 function buyCursors() {
@@ -37,6 +40,10 @@ function buyCursors() {
     cursorPrice = Math.round(cursorPrice * 1.25)
     cursors++
     perSec++
+
+    if (count <= cursorPrice) {
+      buyCursor.classList.remove("can-buy")
+    }
 
     document.getElementById("count").innerHTML = count
     document.getElementById("cursor-price").innerHTML = cursorPrice + " cookies"
@@ -93,14 +100,13 @@ function buyBakeries() {
     count = count - bakeryPrice
     bakeryPrice = Math.round(bakeryPrice * 1.5)
     bakeries++
-    amount *= 2
+    perClick *= 2
 
     document.getElementById("count").innerHTML = count
     document.getElementById("bakery-price").innerHTML = bakeryPrice + " cookies"
     document.getElementById("bakeries").innerHTML = bakeries
-    document.getElementById("amount").innerHTML = amount
+    document.getElementById("perClick").innerHTML = perClick
   }
-  console.log(amount)
 }
 
 function buyTenBakeries() {
@@ -108,12 +114,12 @@ function buyTenBakeries() {
     count = count - (bakeryPrice * 10)
     bakeryPrice = Math.round(bakeryPrice * 15)
     bakeries += 10
-    amount *= 20
+    perClick *= 20
 
     document.getElementById("count").innerHTML = count
     document.getElementById("bakery-price").innerHTML = bakeryPrice + " cookies"
     document.getElementById("bakeries").innerHTML = bakeries
-    document.getElementById("amount").innerHTML = amount
+    document.getElementById("perClick").innerHTML = perClick
   }
 }
 
@@ -122,37 +128,4 @@ setInterval(function () {
   document.getElementById("count").innerHTML = count
 }, 1000)
 
-function saveGame() {
-  let gameSave = {
-    count: count,
-    cursorPrice: cursorPrice ,
-    grandmaPrice: grandmaPrice,
-    bakeryPrice: bakeryPrice,
-    cursors: cursors,
-    grandmas: grandmas,
-    bakeries: bakeries,
-    perSec: perSec,
-    amount: amount
-  }
-  localStorage.setItem("gameSave", JSON.stringify(gameSave))
-}
 
-function loadGame() {
-  let savedGame = JSON.parse(localStorage.getItem("gameSave"))
-  if (typeof savedGame.count !== "undefined") count = savedGame.count
-  if (typeof savedGame.cursorPrice !== "undefined") cursorPrice = savedGame.cursorPrice
-  if (typeof savedGame.grandmaPrice !== "undefined") grandmaPrice = savedGame.grandmaPrice
-  if (typeof savedGame.bakeryPrice !== "undefined") bakeryPrice = savedGame.bakeryPrice
-  if (typeof savedGame.cursors !== "undefined") cursors = savedGame.cursors
-  if (typeof savedGame.bakeries !== "undefined") bakeries = savedGame.bakeries
-  if (typeof savedGame.perSec !== "undefined") perSec = savedGame.perSec
-  if (typeof savedGame.amount !== "undefined") amount = savedGame.amount  
-}
-
-setInterval (function() {
-  saveGame();
-}, 30000)
-
-window.onload = function() {
-  loadGame()
-}

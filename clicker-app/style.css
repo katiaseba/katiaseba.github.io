@@ -96,6 +96,12 @@ li {
   display: inline-block;
   font-size: 16px;
   margin: 15px 5px;
+  opacity: 0.5;
+}
+
+.can-buy {
+  opacity: 1;
+  transition: 0.4s;
   cursor: pointer;
 }
 
