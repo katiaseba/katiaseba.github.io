@@ -29,9 +29,6 @@ buyTenBakery.addEventListener("click", buyTenBakeries)
 function addCount() {
   count += perClick
   document.getElementById("count").innerHTML = count
-  if (count >= cursorPrice) {
-    buyCursor.classList.add("can-buy")
-  } 
 }
 
 function buyCursors() {
@@ -40,10 +37,6 @@ function buyCursors() {
     cursorPrice = Math.round(cursorPrice * 1.25)
     cursors++
     perSec++
-
-    if (count <= cursorPrice) {
-      buyCursor.classList.remove("can-buy")
-    }
 
     document.getElementById("count").innerHTML = count
     document.getElementById("cursor-price").innerHTML = cursorPrice + " cookies"
@@ -105,7 +98,7 @@ function buyBakeries() {
     document.getElementById("count").innerHTML = count
     document.getElementById("bakery-price").innerHTML = bakeryPrice + " cookies"
     document.getElementById("bakeries").innerHTML = bakeries
-    document.getElementById("perClick").innerHTML = perClick
+    document.getElementById("perclick").innerHTML = perClick
   }
 }
 
@@ -119,7 +112,7 @@ function buyTenBakeries() {
     document.getElementById("count").innerHTML = count
     document.getElementById("bakery-price").innerHTML = bakeryPrice + " cookies"
     document.getElementById("bakeries").innerHTML = bakeries
-    document.getElementById("perClick").innerHTML = perClick
+    document.getElementById("perclick").innerHTML = perClick
   }
 }
 
